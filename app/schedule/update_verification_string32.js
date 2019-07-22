@@ -2,7 +2,7 @@
 
 const Subscription = require('egg').Subscription;
 
-class UpdateAgainstData extends Subscription {
+class UpdateVerificationString32 extends Subscription {
   static get schedule() {
     return {
       interval: '1m', // 1 分钟间隔
@@ -13,12 +13,11 @@ class UpdateAgainstData extends Subscription {
   // subscribe 是真正定时任务执行时被运行的函数
   async subscribe() {
     // const { redis } = this.app;
-    // const res = await this.ctx.curl('http://tgapi.k888.bet/H5/Lottery/getJcList?lottery_id=901&play_type=2', {
-    //   dataType: 'json',
-    // });
-    // console.log(redis, res);
+    // console.log(this.app.config.PRIVATE_KEY);
+    // redis.set('ASD', 'ASD');
+    // console.log(await redis.get('ASD'));
     console.log(1);
   }
 }
 
-module.exports = UpdateAgainstData;
+module.exports = UpdateVerificationString32;
